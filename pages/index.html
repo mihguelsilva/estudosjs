@@ -29,16 +29,16 @@
             <h4>Operações</h4>
             <ul class="nav nav-tabs" role="tablist">
                 <li class="nav-item">
-                    <a href="#soma" class="nav-link active" data-bs-toggle="tab">Soma</a>
+                    <a href="#soma" class="nav-link ops active" data-bs-toggle="tab" name="soma">Soma</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#subtracao" class="nav-link" data-bs-toggle="tab">Subtração</a>
+                    <a href="#subtracao" class="nav-link ops" data-bs-toggle="tab" name="sub">Subtração</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#divisao" class="nav-link" data-bs-toggle="tab">Divisão</a>
+                    <a href="#divisao" class="nav-link ops" data-bs-toggle="tab" name="div">Divisão</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#multiplicacao" class="nav-link" data-bs-toggle="tab">Multiplicação</a>
+                    <a href="#multiplicacao" class="nav-link ops" data-bs-toggle="tab" name="mult">Multiplicação</a>
                 </li>
             </ul>
             <div class="tab-content bg-light">
@@ -60,11 +60,11 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col col-3" id="icon-number1"></div>
+                        <div class="col col-3" id="icon-number1-soma"></div>
                         <div class="col col-1"></div>
-                        <div class="col col-3" id="icon-number2"></div>
+                        <div class="col col-3" id="icon-number2-soma"></div>
                         <div class="col col-1"></div>
-                        <div class="col col-3" id="icon-result"></div>
+                        <div class="col col-3" id="icon-result-soma"></div>
                     </div>
                 </div>
                 <!--OPERAÇÃO DE SUBTRAÇÃO-->
@@ -72,19 +72,27 @@
                     <h5 class="titulo-operacao">A OPERAÇÃO DE SUBTRAÇÃO (-) PERMITE DIMINUIR A QUANTIDADE DE ELEMENTOS</h5>
                     <div class="row">
                         <div class="col col-3">
-                            <input type="number" name="num1" id="number1-sub" class="form-control soma">
+                            <input type="number" name="num1" id="number1" class="form-control">
                         </div>
                         <div class="col col-1 text-center"><p class="h3">-</p></div>
                         <div class="col col-3">
-                            <input type="number" name="num2" id="number2-sub" class="form-control soma">
+                            <input type="number" name="num2" id="number2" class="form-control">
                         </div>
                         <div class="col col-1 text-center"><p class="h3">=</p></div>
-                        <div class="col col-3" id="id-div-resposta-sub">
-                            <p class="h4 text-center" id="id-p-resposta-sub"></p>
+                        <div class="col col-3" id="id-div-resposta">
+                            <p class="h4 text-center" id="id-div-resposta-sub"></p>
                         </div>
                     </div>
-                
+                    <div class="row">
+                        <div class="col col-3" id="icon-number1-sub"></div>
+                        <div class="col col-1"></div>
+                        <div class="col col-3" id="icon-number2-sub"></div>
+                        <div class="col col-1"></div>
+                        <div class="col col-3" id="icon-result-sub"></div>
+                    </div>
                 </div>
+                <!--DIVISÃO-->
+                <!--MULTIPLICAÇÃO-->
             </div>
         </div>
     </div>
