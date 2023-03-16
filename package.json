@@ -1,5 +1,5 @@
 {
-  "name": "estudos",
+  "name": "estudosjs",
   "version": "1.0.0",
   "description": "Serviço para melhorar estudos para PCDs",
   "main": "server.js",
