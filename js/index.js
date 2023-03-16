@@ -184,3 +184,17 @@ document.querySelectorAll(".ops").forEach((value, index) => {
         }
     });
 });
+
+document.querySelectorAll(".show").forEach((value, index) => {
+    document.querySelectorAll(".show")[index].addEventListener("click", (e) => {
+        if(document.querySelector(".resposta-block")) {
+            document.querySelectorAll(".resposta").forEach((value, index) => {
+                document.querySelectorAll(".resposta")[index].classList.remove("resposta-block")
+            })
+        } else {
+            document.querySelectorAll(".resposta").forEach((value, index) => {
+                document.querySelectorAll(".resposta")[index].classList.add("resposta-block")
+            })
+        }
+    })
+})

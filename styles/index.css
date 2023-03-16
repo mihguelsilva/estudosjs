@@ -19,6 +19,14 @@ div.icon-number-2 {
 div.icon-result {
     background-color: darkolivegreen;
 }
+div.resposta {
+    display: none;
+    cursor: pointer;
+}
+div.resposta-block {
+    display: block;
+    cursor: pointer;
+}
 div#id-div-resposta,div#id-div-resposta-sub {
     border: 1px solid grey;
     border-radius: 10px;
