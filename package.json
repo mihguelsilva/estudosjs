@@ -7,6 +7,10 @@
     "test": "node --check server.js",
     "start": "node server.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mihguelsilva/estudosjs.git"
+  },
   "author": "Mihguel Da Silva Santos Tavares De Araujo",
-  "license": "ISC"
+  "license": "GNU GPL V2.0"
 }
