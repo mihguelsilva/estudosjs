@@ -115,15 +115,49 @@ function graphNum2(number2) {
 
 // Mapeando alteração de valores numéricos
 document.querySelectorAll(".form-control").forEach((value, index) => {
+    // Mapeando mudanças sob eventos de digitar no teclado
     document.querySelectorAll(".form-control")[index].addEventListener("keyup", (e) => {
         if(e.target.name == "num1") {
             number1 = Number(e.target.value);
         } else if (e.target.name == "num2") {
             number2 = Number(e.target.value);
         }
-        result(ops, number1, number2)
-        graphNum1(number1)
-        graphNum2(number2)
+        if(ops == "div") {
+            if (number2 == 0) {
+                console.log("Nenhum número pode ser divisível por zero!")
+                return;
+            } else {
+                result(ops, number1, number2)
+                graphNum1(number1)
+                graphNum2(number2)
+            }
+        } else {
+            result(ops, number1, number2)
+            graphNum1(number1)
+            graphNum2(number2)
+        }
+    })
+    // Mapeando mudanças ao sob eventos de alterações
+    document.querySelectorAll(".form-control")[index].addEventListener("change", (e) => {
+        if(e.target.name == "num1") {
+            number1 = Number(e.target.value);
+        } else if (e.target.name == "num2") {
+            number2 = Number(e.target.value);
+        }
+        if(ops == "div") {
+            if (number2 == 0) {
+                console.log("Nenhum número pode ser divisível por zero!")
+                return;
+            } else {
+                result(ops, number1, number2)
+                graphNum1(number1)
+                graphNum2(number2)
+            }
+        } else {
+            result(ops, number1, number2)
+            graphNum1(number1)
+            graphNum2(number2)
+        }
     })
 })
 
@@ -132,25 +166,19 @@ document.querySelectorAll(".ops").forEach((value, index) => {
     document.querySelectorAll(".ops")[index].addEventListener("click", (e) => {
         console.log(e.target.name)
         if (e.target.name == "soma") {
-            resetNum()
+            resetNum();
             ops = "soma";
             change(ops);
         } else if (e.target.name == "sub") {
-            resetNum()
+            resetNum();
             ops = "sub";
             change(ops);
         } else if (e.target.name == "div") {
-            resetNum()
-            if (number2 == 0) {
-                alert("Nenhum número pode ser dividido por zero!")
-                return
-            }
-            if (number2 > 1) {
-                ops = "div";
-                change(ops);
-            }
+            resetNum();
+            ops = "div";
+            change(ops);
         } else if (e.target.name == "mult") {
-            resetNum()
+            resetNum();
             ops = "mult";
             change(ops);
         }
