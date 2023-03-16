@@ -1,7 +1,3 @@
-/*
-  OPERAÇÕES DE SOMA
-*/
-
 // Resetar valores
 document.querySelectorAll(".form-control").forEach((value, index) => {
     document.querySelectorAll(".form-control")[index].value = 0;
@@ -10,21 +6,27 @@ document.querySelectorAll(".form-control").forEach((value, index) => {
 var number1 = 0;
 var number2 = 0;
 
+// Parágrafo de resultado final
 var p = document.querySelector("#id-div-resposta-soma");
 
+// Ícones
 var icon = [
     document.querySelector("#icon-number1-soma"),
     document.querySelector("#icon-number2-soma"),
     document.querySelector("#icon-result-soma")
 ]
+
+// Valores padrão para operações
 var ops = "soma";
 var imagem = "../img/operacoes/maca.png"
 
+// Resetando números para cálculo
 function resetNum() {
     number1 = 0;
     number2 = 0;
 }
 
+// Alterando valores de elementos
 function change(ops) {
     p = document.querySelector("#id-div-resposta-"+ops)
     icon[0] = document.querySelector("#icon-number1-"+ops);
@@ -32,6 +34,7 @@ function change(ops) {
     icon[2] = document.querySelector("#icon-result-"+ops);
 }
 
+// Cálculo final e representação do resultado
 function result(ops, number1, number2) {
     console.log(number1);
     console.log(number2)
@@ -66,6 +69,7 @@ function result(ops, number1, number2) {
     }
 }
 
+// Representação do número 1
 function graphNum1(number1) {
 
     // Resetando representação gráfica
@@ -87,6 +91,7 @@ function graphNum1(number1) {
     }
 }
 
+// Reprsentação do número 2
 function graphNum2(number2) {
 
     // Resetando representação gráfica
@@ -108,6 +113,7 @@ function graphNum2(number2) {
     }
 }
 
+// Mapeando alteração de valores numéricos
 document.querySelectorAll(".form-control").forEach((value, index) => {
     document.querySelectorAll(".form-control")[index].addEventListener("keyup", (e) => {
         if(e.target.name == "num1") {
@@ -121,6 +127,7 @@ document.querySelectorAll(".form-control").forEach((value, index) => {
     })
 })
 
+// Mapeando alteração das operações
 document.querySelectorAll(".ops").forEach((value, index) => {
     document.querySelectorAll(".ops")[index].addEventListener("click", (e) => {
         console.log(e.target.name)
@@ -133,13 +140,19 @@ document.querySelectorAll(".ops").forEach((value, index) => {
             ops = "sub";
             change(ops);
         } else if (e.target.name == "div") {
-            ops = "div";
+            resetNum()
+            if (number2 == 0) {
+                alert("Nenhum número pode ser dividido por zero!")
+                return
+            }
+            if (number2 > 1) {
+                ops = "div";
+                change(ops);
+            }
         } else if (e.target.name == "mult") {
+            resetNum()
             ops = "mult";
+            change(ops);
         }
     });
 });
-
-/*
-  OPERAÇÕES DE SUBTRAÇÃO
-*/
