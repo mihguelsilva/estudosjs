@@ -1,0 +1,12 @@
+{
+  "name": "estudos",
+  "version": "1.0.0",
+  "description": "Serviço para melhorar estudos para PCDs",
+  "main": "server.js",
+  "scripts": {
+    "test": "node --check server.js",
+    "start": "node server.js"
+  },
+  "author": "Mihguel Da Silva Santos Tavares De Araujo",
+  "license": "ISC"
+}

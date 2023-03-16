@@ -1,0 +1,35 @@
+@charset "utf-8";
+div.row {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+div.icon-number-1,div.icon-number-2,div.icon-result {
+    width: 20px;
+    height: 50px;
+    margin: 2px;
+    border: 1px solid black;
+    float: left;
+}
+div.icon-number-1 {
+    background-color:blueviolet;
+}
+div.icon-number-2 {
+    background-color: aquamarine;
+}
+div.icon-result {
+    background-color: darkolivegreen;
+}
+div#id-div-resposta,div#id-div-resposta-sub {
+    border: 1px solid grey;
+    border-radius: 10px;
+    height: 35px;
+}
+h5.titulo-operacao {
+    margin-top: 50px;
+}
+label, input[type="radio"] {
+    cursor: pointer;
+}
+label {
+    margin-right: 20px;
+}
