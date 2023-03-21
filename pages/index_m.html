@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Estudos</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <link rel="stylesheet" href="../styles/index.css">
+  <script src="../js/header_sf.js" defer></script>
+  <script src="../js/header.js" defer></script>
+</head>
+
+<body class="bg-light bg-gradient">
+  <header class="container-fluid" id="id-header-main"></header>
+  <main class="container mt-3">
+    <h3>Operações</h3>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#soma" class="nav-link ops active" data-bs-toggle="tab" name="soma">Soma</a>
+        </li>
+        <li class="nav-item">
+            <a href="#subtracao" class="nav-link ops" data-bs-toggle="tab" name="sub">Subtração</a>
+        </li>
+        <li class="nav-item">
+            <a href="#divisao" class="nav-link ops" data-bs-toggle="tab" name="div">Divisão</a>
+        </li>
+        <li class="nav-item">
+            <a href="#multiplicacao" class="nav-link ops" data-bs-toggle="tab" name="mult">Multiplicação</a>
+        </li>
+    </ul>
+    <div class="tab-content bg-light">
+        <!--OPERAÇÃO DE SOMA-->
+        <div id="soma" class="container tab-pane active">
+            <h5 class="titulo-operacao">A OPERAÇÃO DE SOMA (+) PERMITE AUMENTAR A QUANTIDADE DE ELEMENTOS</h5>
+            <!--Operação-->
+            <div class="row">
+                <div class="col col-3">
+                    <input type="number" name="num1" id="number1" class="form-control soma">
+                </div>
+                <div class="col col-1 text-center"><p class="h3">+</p></div>
+                <div class="col col-3">
+                    <input type="number" name="num2" id="number2" class="form-control soma">
+                </div>
+                <div class="col col-1 text-center"><p class="h3">=</p></div>
+                <div class="col col-3 resposta" id="id-div-resposta">
+                    <p class="h4 text-center" id="id-div-resposta-soma"></p>
+                </div>
+            </div>
+            <!--Representação por ícones-->
+            <div class="row">
+                <div class="col col-3" id="icon-number1-soma"></div>
+                <div class="col col-1"></div>
+                <div class="col col-3" id="icon-number2-soma"></div>
+                <div class="col col-1"></div>
+                <div class="col col-3 resposta" id="icon-result-soma"></div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <button type="button" class="show">Mostrar</button>
+                </div>
+            </div>
+        </div>
+        <!--OPERAÇÃO DE SUBTRAÇÃO-->
+        <div id="subtracao" class="container tab-pane fade">
+            <h5 class="titulo-operacao">A OPERAÇÃO DE SUBTRAÇÃO (-) PERMITE DIMINUIR A QUANTIDADE DE ELEMENTOS</h5>
+            <!--Operação-->
+            <div class="row">
+                <div class="col col-3">
+                    <input type="number" name="num1" id="number1" class="form-control">
+                </div>
+                <div class="col col-1 text-center"><p class="h3">-</p></div>
+                <div class="col col-3">
+                    <input type="number" name="num2" id="number2" class="form-control">
+                </div>
+                <div class="col col-1 text-center"><p class="h3">=</p></div>
+                <div class="col col-3 resposta" id="id-div-resposta">
+                    <p class="h4 text-center" id="id-div-resposta-sub"></p>
+                </div>
+            </div>
+            <!--Representação por ícones-->
+            <div class="row">
+                <div class="col col-3" id="icon-number1-sub"></div>
+                <div class="col col-1"></div>
+                <div class="col col-3" id="icon-number2-sub"></div>
+                <div class="col col-1"></div>
+                <div class="col col-3 resposta" id="icon-result-sub"></div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <button type="button" class="show">Mostrar</button>
+                </div>
+            </div>
+        </div>
+        <!--DIVISÃO-->
+        <div id="divisao" class="container tab-pane fade">
+            <h5 class="titulo-operacao">A OPERAÇÃO DE DIVISÃO (/) PERMITE</h5>
+            <!--Operação-->
+            <div class="row">
+                <div class="col col-3">
+                    <input type="number" name="num1" id="number1" class="form-control">
+                </div>
+                <div class="col col-1 text-center"><p class="h3">/</p></div>
+                <div class="col col-3">
+                    <input type="number" name="num2" id="number2" class="form-control">
+                </div>
+                <div class="col col-1 text-center"><p class="h3">=</p></div>
+                <div class="col col-3 resposta" id="id-div-resposta">
+                    <p class="h4 text-center" id="id-div-resposta-div"></p>
+                </div>
+            </div>
+            <!--Representação por ícones-->
+            <div class="row">
+                <div class="col col-3" id="icon-number1-div"></div>
+                <div class="col col-1"></div>
+                <div class="col col-3" id="icon-number2-div"></div>
+                <div class="col col-1"></div>
+                <div class="col col-3 resposta" id="icon-result-div"></div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <button type="button" class="show">Mostrar</button>
+                </div>
+            </div>
+        </div>
+        <!--MULTIPLICAÇÃO-->
+        <div id="multiplicacao" class="container tab-pane fade">
+            <h5 class="titulo-operacao">A OPERAÇÃO DE MULTIPLICAÇÂO (*) PERMITE </h5>
+            <!--Operação-->
+            <div class="row">
+                <div class="col col-3">
+                    <input type="number" name="num1" id="number1" class="form-control">
+                </div>
+                <div class="col col-1 text-center"><p class="h3">*</p></div>
+                <div class="col col-3">
+                    <input type="number" name="num2" id="number2" class="form-control">
+                </div>
+                <div class="col col-1 text-center"><p class="h3">=</p></div>
+                <div class="col col-3 resposta" id="id-div-resposta">
+                    <p class="h4 text-center" id="id-div-resposta-mult"></p>
+                </div>
+            </div>
+            <!--Representação por ícones-->
+            <div class="row">
+                <div class="col col-3" id="icon-number1-mult"></div>
+                <div class="col col-1"></div>
+                <div class="col col-3" id="icon-number2-mult"></div>
+                <div class="col col-1"></div>
+                <div class="col col-3 resposta" id="icon-result-mult"></div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <button type="button" class="show">Mostrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+  </main>
+  <footer>
+    <!-- place footer here -->
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+  <script src="../js/index.js"></script>
+</body>
+
+</html>
